@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Vue Basic</h1>
+    <div id="app">
+        <h2>{{ title }}</h2>
+        <h2>Hi, {{ name }}</h2>
+        <p>I earn {{ wage }} pounds per hour</p>
+        <button id="" v-on:click="changeWage(1)">Increase wage by $1</button>
+        <button id="" v-on:click="changeWage(-1)">Decrease wage by $1</button>
+        <button id="" v-on:dblclick="changeWage(5)">Decrease wage by $5</button>
+        <button id="" v-on:dblclick="changeWage(-5)">Decrease wage by $5</button>
+        <button @click="logEvent">Log Event Info</button>
+        <div class="canvas" @mouseover="logCoords">{{ coords.x }}, {{ coords.y }}</div>
+
+        <input type="text" @keyup="updateName">
+        <input type="text" @keypress="updateName">
+
+        <input type="text" v-model="name">
+
+        <button @click.alt="logMessage">alt-Click Me</button>
+        <button @click.shift="logMessage">shift-Click Me</button>
+        <button @click.ctrl="logMessage">ctrl-Click Me</button>
+
+        <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
