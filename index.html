@@ -36,6 +36,18 @@
         <button @click.ctrl="logMessage">ctrl-Click Me</button>
 
         <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
+        <p v-if="showName">Tevin Taylor</p>
+
+        <p v-else-if="showAge">25</p>
+
+        <button @click="toggleName">ShowName:{{ showName }}</button>
+        <button @click="toggleAge">ShowName:{{ showAge }}</button>
+
+        <ul>
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
+
+
     </div>
     <script src="app.js"></script>
 </body>

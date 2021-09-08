@@ -7,7 +7,15 @@ new Vue({
         coords: {
             x: 0,
             y: 0
-        }
+        },
+        showName: false,
+        showAge: true,
+        items: ['Mushtoom', 'Green Shells', 'Red Shells', 'Banana', 'Star'],
+        ninjas: [
+            { name: 'Crystal', age: 25, belt: 'Black' },
+            { name: 'Tevin', age: 30, belt: 'Brown' },
+            { name: 'Tom', age: 35, belt: 'Orange' }
+        ]
     },
     methods: {
         changeWage(amount) {
@@ -26,6 +34,12 @@ new Vue({
         },
         logMessage() {
             console.log('hello world')
+        },
+        toggleName() {
+            this.showName = !this.showName
+        },
+        toggleAge() {
+            this.showAge = !this.showAge
         }
     }
 })
